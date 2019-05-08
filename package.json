@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/Faxxiz/arlex_site_vitrine#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "request": "^2.88.0"
   }
 }

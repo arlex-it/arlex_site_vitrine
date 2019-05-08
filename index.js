@@ -1,9 +1,10 @@
-const express = require('express')
+const express = require('express');
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-});
+app.set('view engine', 'ejs');
+app.use('/public', express.static('./public'));
+
+require('./routes/views')(app);
 
 app.listen(8000, () => {
   console.log('Example app listening on port 8000!')
