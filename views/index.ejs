@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <meta charset="utf-8">
-    <title>Dev AREA 2018</title>
+    <title>Arlex</title>
     <link href="/public/stylesheets/index.css" rel="stylesheet" type="text/css">
 
     <!-- Bootstrap CDN -->
@@ -13,27 +13,56 @@
           integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
     <!-- jQuery integration -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="/public/js/script.js"></script>
 
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 
 <body>
+
 <div class="container">
     <!-- header -->
-    <div class="row">
-        <div class="col-lg-2 mx-auto">
-            <a href="#" class="dashboardtitle">Notre équipe</a>
+    <div class="row sticky-top navpage">
+        <div class="col-lg-1 mx-auto">
+            <a class="dashboardtitle" id="link-notre-equipe">Notre équipe</a>
         </div>
         <div class="col-lg-1 mx-auto">
-            <a href="#" class="dashboardtitle">FAQ</a>
+            <a class="dashboardtitle" id="link-contact">Contact</a>
         </div>
+        <div class="col-lg-1 mx-auto">
+            <a class="dashboardtitle" id="link-faq">FAQ</a>
+        </div>
+    </div>
 
-        <div class="col-lg-2 mx-auto">
-            <a href="#" class="dashboardtitle">Contact</a>
+    <div class="row-fluid description center">
+        <div class="mx-auto">
+            <h1 class="arlex-title">Arlex</h1>
+            <h4 class="arlex-text">Lorem ipsum</h4>
+        </div>
+    </div>
+
+    <div class="row-fluid notre-equipe center">
+        <div class="mx-auto">
+            <h1 class="notre-equipe-title">Notre Équipe</h1>
+            <h4 class="notre-equipe-text">Lorem ipsum</h4>
+        </div>
+    </div>
+
+    <div class="row-fluid contact center">
+        <div class="mx-auto">
+            <h1 class="contact-title">Contact</h1>
+            <h4 class="contact-text">Lorem ipsum</h4>
+        </div>
+    </div>
+
+    <div class="row-fluid faq center">
+        <div class="mx-auto">
+            <h1 class="faq-title">FAQ</h1>
+            <h4 class="faq-text">Lorem ipsum</h4>
         </div>
     </div>
 </div>
+
 </body>
