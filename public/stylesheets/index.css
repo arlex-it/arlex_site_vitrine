@@ -51,9 +51,29 @@ html, body {
 
 .notre-equipe, .faq, .center {
     min-height: 60vh !important;
-    height: 60vh !important;
 }
 
-#link-notre-equipe:hover, #link-contact:hover, #link-faq:hover {
+#link-arlex, #link-notre-equipe:hover, #link-contact:hover, #link-faq:hover {
     cursor: pointer;
+}
+
+.maxheightphotos {
+    margin: 100px 0 !important;
+}
+
+.maxheightphotos img {
+    max-height: 200px;
+    max-width: 200px;
+    height: auto;
+    width: auto;
+    display: block;
+    margin: 0;
+}
+
+.offset-lg-1 {
+    margin-left: 6.5% !important;
+}
+
+figcaption {
+    padding-top: 20px;
 }

@@ -1,4 +1,10 @@
 $(function () {
+    $('#link-arlex').on('click', function () {
+        $('html,body').animate({
+            scrollTop: $(".description").offset().top - 150
+        }, 'slow');
+    });
+
     $('#link-notre-equipe').on('click', function () {
         $('html,body').animate({
             scrollTop: $(".notre-equipe").offset().top - 150
