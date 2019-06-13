@@ -77,3 +77,9 @@ html, body {
 figcaption {
     padding-top: 20px;
 }
+
+.arlex-text, .notre-equipe-text {
+    padding-left: 20vh;
+    padding-right: 20vh;
+    margin-top: 4vh;
+}
