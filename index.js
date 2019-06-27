@@ -1,6 +1,15 @@
 const express = require('express');
 const app = express();
+const sass = require('node-sass-middleware');
 
+app.use(sass({
+    src: './public/sass', //where the sass files are
+    dest: './public/stylesheets', //where css should go
+    debug: true, // obvious
+    outputStyle: 'compressed',
+    prefix: '/public/stylesheets'
+    })
+);
 app.set('view engine', 'ejs');
 app.use('/public', express.static('./public'));
 
