@@ -9,23 +9,24 @@ $(function () {
     function changeStateOnScroll() {
         let cur_pos = $(this).scrollTop();
         sections.each(function() {
-            let top = $(this).offset().top - 200,
+            let top = $(this).offset().top - 400,
                 bottom = top + $(this).outerHeight();
 
             if (cur_pos >= top && cur_pos <= bottom && curr !== $(this).attr('data-id')) {
                 curr = $(this).attr('data-id');
-                tab.tabList_[0].foundation_.deactivate();
-                tab.tabList_[1].foundation_.deactivate();
-                tab.tabList_[2].foundation_.deactivate();
-                tab.tabList_[3].foundation_.deactivate();
-                tab.tabList_[curr].foundation_.activate();
+                tab.tabList_[0].deactivate();
+                tab.tabList_[1].deactivate();
+                tab.tabList_[2].deactivate();
+                tab.tabList_[3].deactivate();
+                tab.tabList_[curr].activate();
             }
         });
     }
 
 
     $(window).on('scroll', function () {
-        changeStateOnScroll()
+        if (!isMoving)
+            changeStateOnScroll()
     });
     changeStateOnScroll();
 
@@ -34,11 +35,19 @@ $(function () {
         1: '.notre-equipe',
         2: '.contact',
         3: '.faq'
-    }
+    };
+
+    let isMoving = false;
+
     function moveTo(idx) {
+        isMoving = true;
+        console.log("bouge");
         $('html,body').animate({
             scrollTop: $(placeMove[idx]).offset().top - 150
-        }, 'slow');
+        }, 'slow', function () {
+            console.log("fini");
+            isMoving = false;
+        });
     }
 
     tab.listen("MDCTabBar:activated", function(t) {
