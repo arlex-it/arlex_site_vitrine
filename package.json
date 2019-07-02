@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"test OK\"",
-    "start": "node-sass public/sass -o public/stylesheets"
+    "start": "node-sass sass -o stylesheets"
   },
   "repository": {
     "type": "git",
