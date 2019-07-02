@@ -6,7 +6,8 @@
     <meta name="Description" content="Site vitrine Arlex">
 
     <title>Arlex</title>
-    <link href="/public/stylesheets/index.css" rel="stylesheet" type="text/css">
+    <link href="./stylesheets/index.css" rel="stylesheet" type="text/css">
+    <link href="./stylesheets/circular.css" rel="stylesheet" type="text/css">
 
     <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -18,10 +19,13 @@
 
     <!-- jQuery integration -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="/public/js/script.js"></script>
+    <script src="./js/script.js"></script>
 
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    <!-- SMTP JS-->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 
     <!-- MDC -->
     <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
@@ -93,7 +97,7 @@
 <div class="mdc-layout-grid mdc-theme--secondary-bg mdc-theme--on-secondary description" style="padding-top: 70px" data-id="0">
     <div class="mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--align-middle">
-            <img src="/public/jpg/logo.png" alt="logo arlex">
+            <img src="./jpg/logo.png" alt="logo arlex">
         </div>
         <div class="mdc-layout-grid__cell
         mdc-layout-grid__cell--span-12-desktop
@@ -117,7 +121,7 @@
             <div class="mdc-card demo-card demo-basic-with-text-over-media">
                 <div class="mdc-card__primary-action demo-card__primary-action">
                     <div class="mdc-card__media mdc-card__media-content demo-card__media">
-                        <img src="/public/jpg/benjamin.losson.jpg" alt="Photo Benjamin Losson">
+                        <img src="./jpg/benjamin.losson.jpg" alt="Photo Benjamin Losson">
                     </div>
                 </div>
             </div>
@@ -134,7 +138,7 @@
             <div class="mdc-card demo-card demo-basic-with-text-over-media">
                 <div class="mdc-card__primary-action demo-card__primary-action">
                     <div class="mdc-card__media mdc-card__media-content demo-card__media">
-                        <img src="/public/jpg/charles.castelain.jpg" alt="Photo Charles Castelain">
+                        <img src="./jpg/charles.castelain.jpg" alt="Photo Charles Castelain">
                     </div>
                 </div>
             </div>
@@ -151,7 +155,7 @@
             <div class="mdc-card demo-card demo-basic-with-text-over-media">
                 <div class="mdc-card__primary-action demo-card__primary-action">
                     <div class="mdc-card__media mdc-card__media-content demo-card__media">
-                        <img src="/public/jpg/augustin.lopacinski.jpg" alt="Photo Augustin Lopacinski">
+                        <img src="./jpg/augustin.lopacinski.jpg" alt="Photo Augustin Lopacinski">
                     </div>
                 </div>
             </div>
@@ -168,7 +172,7 @@
             <div class="mdc-card demo-card demo-basic-with-text-over-media">
                 <div class="mdc-card__primary-action demo-card__primary-action">
                     <div class="mdc-card__media mdc-card__media-content demo-card__media">
-                        <img src="/public/jpg/corentin.minne.jpg" alt="Photo Corentin Minne">
+                        <img src="./jpg/corentin.minne.jpg" alt="Photo Corentin Minne">
                     </div>
                 </div>
             </div>
@@ -185,7 +189,7 @@
             <div class="mdc-card demo-card demo-basic-with-text-over-media">
                 <div class="mdc-card__primary-action demo-card__primary-action">
                     <div class="mdc-card__media mdc-card__media-content demo-card__media">
-                        <img src="/public/jpg/orlane.oddo.jpg" alt="Photo Orlane Oddo">
+                        <img src="./jpg/orlane.oddo.jpg" alt="Photo Orlane Oddo">
                     </div>
                 </div>
             </div>
@@ -202,7 +206,7 @@
             <div class="mdc-card demo-card demo-basic-with-text-over-media">
                 <div class="mdc-card__primary-action demo-card__primary-action">
                     <div class="mdc-card__media mdc-card__media-content demo-card__media">
-                        <img src="/public/jpg/simon.bauchet.jpg" alt="Photo Simon Bauchet">
+                        <img src="./jpg/simon.bauchet.jpg" alt="Photo Simon Bauchet">
                     </div>
                 </div>
             </div>
@@ -234,11 +238,15 @@
         </div>
     </div>
 </div>
+
+
 <!--<div class="mdc-tab-bar" role="tablist" data-mdc-auto-init="MDCTabBar"><div class="mdc-tab-scroller"></div</div>-->
 <div class="mdc-layout-grid mdc-theme--secondary-bg mdc-theme--on-secondary contact" data-id="2">
     <h1 class="text-center mdc-typography mdc-typography--headline3">Contactez-nous !</h1>
     <hr class="arlex-separator">
-    <form method="post" action="/" method="post" data-toggle="validator">
+    <h2 class="text-center mdc-typography mdc-typography--headline5">Si vous avez des questions ou autres, n'hesitez pas à nous contacter.</h2>
+    <p class="text-center mdc-typography mdc-typography--body1 arlex-info"></p>
+    <form method="post" data-toggle="validator">
         <div class="mdc-layout-grid__inner arlex-mrt-50">
             <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-8-tablet">
 

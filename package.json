@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"test OK\"",
-    "start": "node index.js"
+    "start": "node-sass public/sass -o public/stylesheets"
   },
   "repository": {
     "type": "git",
@@ -16,26 +16,10 @@
     "url": "https://github.com/Faxxiz/arlex_site_vitrine/issues"
   },
   "homepage": "https://github.com/Faxxiz/arlex_site_vitrine#readme",
-  "dependencies": {
-    "ejs": "^2.6.1",
-    "express": "^4.16.4",
-    "jquery": "^3.4.1",
-    "material-components-web": "^2.3.1",
-    "node-sass": "^4.12.0",
-    "node-sass-middleware": "^0.11.0",
-    "nodemailer": "^6.2.1",
-    "request": "^2.88.0"
-  },
+  "dependencies": {},
   "keywords": [],
   "description": "",
   "devDependencies": {
-    "@babel/core": "^7.4.5",
-    "@babel/preset-env": "^7.4.5",
-    "babel-loader": "^8.0.6",
-    "html-loader": "^0.5.5",
-    "html-webpack-plugin": "^3.2.0",
-    "webpack": "^4.35.0",
-    "webpack-cli": "^3.3.5",
-    "webpack-node-externals": "^1.7.2"
+    "node-sass": "^4.12.0"
   }
 }

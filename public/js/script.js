@@ -51,25 +51,50 @@ $(function () {
     }
 
     tab.listen("MDCTabBar:activated", function(t) {
-        console.log(t);
         moveTo(t.detail.index)
     });
 
-    $('#link-notre-equipe').on('click', function () {
-        $('html,body').animate({
-            scrollTop: $(".notre-equipe").offset().top - 150
-        }, 'slow');
-    });
+    let btnContent = $('form button').html();
+    let isSending = false;
+    const key = '021540ea-d925-455a-ba1e-9ec0d98508fe';
 
-    $('#link-contact').on('click', function () {
-        $('html,body').animate({
-            scrollTop: $(".contact").offset().top - 150
-        }, 'slow');
-    });
+    $('form').on('submit', function () {
+        event.preventDefault();
+        if (isSending)
+            return;
+        let name = $('#username-input').val();
+        let subject = $('#subject-input').val();
+        let content = $('#textarea').val();
+        let email = $('#email-input').val();
 
-    $('#link-faq').on('click', function () {
-        $('html,body').animate({
-            scrollTop: $(".faq").offset().top - 150
-        }, 'slow');
-    });
+        if (subject.trim() === "" || name.trim() === "" || content.trim() === "" || email.trim() === "")
+            return false;
+        isSending = true;
+        let progress = '<progress class="pure-material-progress-circular"/>';
+        $('form button').html(progress);
+
+        let msg = `<h3>${name} vous a envoyé un message</h3>
+            <h2>Sujet: ${subject}</h2>
+            <p>${content}</p>
+            </br>`;
+
+        Email.send({
+            SecureToken : key,
+            To : 'contact@arlex.fr',
+            From : email,
+            Subject : subject,
+            Body : msg
+        }).then(
+            message => {
+                isSending = false;
+                if (message === "OK") {
+                    $(this).trigger("reset");
+                    $('.arlex-info')[0].innerText = 'Merci pour votre message !';
+                } else {
+                    $('.arlex-info')[0].innerText = 'Une erreur est survenue veuillez réessayer. (' + message + ')';
+                }
+                $('form button').html(btnContent);
+            }
+        );
+    })
 });
