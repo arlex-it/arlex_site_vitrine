@@ -3,11 +3,32 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="Description" content="Site vitrine Arlex">
 
     <title>Arlex</title>
+    <meta name="description" content="Arlex permet à un déficient visuel de gagner du temps et de l’autonomie dans sa cuisine grâce à un assistant vocal.">
+
+
     <link href="./stylesheets/index.css" rel="stylesheet" type="text/css">
     <link href="./stylesheets/circular.css" rel="stylesheet" type="text/css">
+
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 
     <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -19,18 +40,33 @@
 
     <!-- jQuery integration -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="./js/script.js"></script>
+    <script async src="./js/script.js"></script>
 
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
     <!-- SMTP JS-->
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script async src="https://smtpjs.com/v3/smtp.js"></script>
 
     <!-- MDC -->
-    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
-    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <link href="https://unpkg.com/material-components-web@3.1.0/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@3.1.0/dist/material-components-web.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Scrollbar -->
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.7.3/css/OverlayScrollbars.min.css" integrity="sha256-rNzgVOkP115yxpy0UHD/s1nlJsmcIU8+QRApAsAgNKU=" crossorigin="anonymous" />-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.7.3/js/jquery.overlayScrollbars.min.js" integrity="sha256-kSMQ0xCEQxtIPsWU8tsRrYw+yyb83MVXnKMK357kuSY=" crossorigin="anonymous"></script>-->
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143741177-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-143741177-1');
+    </script>
 
 </head>
 
@@ -39,6 +75,17 @@
     <div class="mdc-tab-bar" role="tablist">
         <div class="mdc-tab-scroller">
             <div class="mdc-tab-scroller__scroll-area">
+                <!--<div class="mdc-menu-surface&#45;&#45;anchor">-->
+                <!--<button class="mdc-icon-button material-icons mdc-ripple-upgraded arlex-open-lang" aria-label="Add to favorites" data-mdc-auto-init="MDCRipple">-->
+                <!--language-->
+                <!--</button>-->
+                <!--<div class="mdc-menu mdc-menu-surface" tabindex="-1" style="transform-origin: center bottom; left: 0px; bottom: 0px; max-height: 602.781px;" data-mdc-auto-init="MDCMenuSurface">-->
+                <!--<ul class="mdc-list" role="menu" aria-hidden="true">-->
+                <!--<li class="mdc-list-item mdc-ripple-upgraded" role="menuitem" tabindex="0">Français</li>-->
+                <!--<li class="mdc-list-item mdc-ripple-upgraded" role="menuitem" tabindex="-1">English</li>-->
+                <!--</ul>-->
+                <!--</div>-->
+                <!--</div>-->
                 <div class="mdc-tab-scroller__scroll-content">
                     <button class="mdc-tab mdc-tab--active go-description" role="tab" aria-selected="true" tabindex="0">
                         <span class="mdc-tab__content">
@@ -326,7 +373,7 @@
             <div class="arlex-faq-list">
                 <div class="arlex-faq">
                     <div class="mdc-typography mdc-typography--headline5 arlex-faq-title">Comment j'utilise Arlex ?</div>
-                    <div class="mdc-typography mdc-typography--body1 arlex-faq-response">Arlex est une solution adaptée aux aveugles et malvoyants, il suffit de lui demander vocalement ce que vous souhaitez et Arlex vous répondra en conséquence.</div>
+                    <div class="mdc-typography mdc-typography--body1 arlex-faq-response">Arlex est une solution adaptée aux aveugles et malvoyants, il suffit de lui demander vocalement, via un assistant vocal, ce que vous souhaitez et Arlex vous répondra en conséquence.</div>
                 </div>
                 <div class="arlex-faq">
                     <div class="mdc-typography mdc-typography--headline5 arlex-faq-title">Que puis-je lui demander ?</div>
@@ -341,17 +388,53 @@
                 </div>
                 <div class="arlex-faq">
                     <div class="mdc-typography mdc-typography--headline5 arlex-faq-title">Comment Arlex a toutes ces informations ?</div>
-                    <div class="mdc-typography mdc-typography--body1 arlex-faq-response">Arlex a accès à la position des produits grâce à des capteurs installés dans vos armoires. Pour les informations du produits celle ci sont enregistrées sur le produit</div>
+                    <div class="mdc-typography mdc-typography--body1 arlex-faq-response">Arlex a accès à la position des produits grâce à des capteurs installés dans vos armoires. Pour les informations du produits celle ci sont enregistrées sur le produit.</div>
                 </div>
-                <div class="arlex-faq">
-                    <div class="mdc-typography mdc-typography--headline5 arlex-faq-title">Question</div>
-                    <div class="mdc-typography mdc-typography--body1 arlex-faq-response">Réponse</div>
-                </div>
+                <!--<div class="arlex-faq">-->
+                <!--<div class="mdc-typography mdc-typography&#45;&#45;headline5 arlex-faq-title">Question</div>-->
+                <!--<div class="mdc-typography mdc-typography&#45;&#45;body1 arlex-faq-response">Réponse</div>-->
+                <!--</div>-->
             </div>
         </div>
     </div>
 </div>
-<footer class="mdc-layout-grid mdc-theme--secondary-bg mdc-theme--on-secondary">
+<footer class="mdc-layout-grid mdc-theme--secondary-bg mdc-theme--on-secondary arlex-footer">
+    <div class="arlex-footer-left">
+        <p class="arlex-footer-links">
+            <a href="#" onclick="moveTo(0)">Description</a>
+            ·
+            <a href="#" onclick="moveTo(1)">Notre équipe</a>
+            ·
+            <a href="#" onclick="moveTo(2)">Contact</a>
+            ·
+            <a href="#" onclick="moveTo(3)">FAQ</a>
+        </p>
+
+        <p>Arlex © 2018</p>
+    </div>
+    <div class="arlex-footer-center">
+        <div class="mdc-typography mdc-typography--body1">
+            Vous souhaitez nous aider ? <br>
+            Nous avons 2 sondages pour vous !
+        </div>
+        <ul>
+            <li><a title="Premier sondage" rel="nofollow noreferrer" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSe_V0ktcx9ADjdBHQvjIUPzaqhFkEXCVxGSB1bMC49MbTGh7g/viewform">- Premier sondage</a></li>
+            <li><a title="Second sondage" rel="nofollow noreferrer" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfdazzXeXEgQU7zbPrt9L_NUnQ_hHi8Z7As3HQ8dx9reeGtAg/viewform">- Second sondage</a></li>
+        </ul>
+    </div>
+    <div class="arlex-footer-right">
+        <div class="arlex-footer-social">
+            <a href="https://www.facebook.com/ArlexFR" rel="nofollow noreferrer" title="Aller sur Facebook" aria-label="Aller sur Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/ArlexFR" rel="nofollow noreferrer" title="Aller sur Twitter" aria-label="Aller sur Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+            <a href="#" rel="nofollow noreferrer" title="Aller sur Linkedin" aria-label="Aller sur Linkedin"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+        </div>
+        <div class="arlex-footer-infos" title="Nous contacter" aria-label="Nous contacter">
+            <i class="fas fa-envelope" aria-hidden="true"></i><a href="mailto:contact@arlex.fr">contact@arlex.fr</a>
+        </div>
+        <div class="arlex-footer-infos" title="Notre position" aria-label="Notre position">
+            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>Lille, <b>France</b>
+        </div>
+    </div>
 
 </footer>
 </body>

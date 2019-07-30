@@ -1,7 +1,48 @@
 let tab;
+let scroll;
 
+let isMoving = false;
+let placeMove = {
+    0: '.description',
+    1: '.notre-equipe',
+    2: '.contact',
+    3: '.faq'
+};
+
+function moveTo(idx) {
+    isMoving = true;
+    // scroll.scroll({
+    //     y: "+=" + ($(placeMove[idx]).offset().top - 150)
+    // }, 600, undefined, function() {
+    //     console.log("lol");
+    //     isMoving = false;
+    // });
+    $('html,body').animate({
+        scrollTop: $(placeMove[idx]).offset().top - 150
+    }, 'slow', function () {
+        isMoving = false;
+    });
+}
 $(function () {
+    // let menu = new mdc.menu.MDCMenu(document.querySelector('.mdc-menu'));
     tab = new mdc.tabBar.MDCTabBar(document.querySelector('.mdc-tab-bar'));
+
+    // scroll = $("body").overlayScrollbars({
+    //     scrollbars : {
+    //         visibility       : "auto",
+    //         autoHide         : "move",
+    //         autoHideDelay    : 800,
+    //         dragScrolling    : true,
+    //         clickScrolling   : false,
+    //         touchSupport     : true,
+    //         snapHandle       : false
+    //     },
+    //     callbacks: {
+    //         onScroll: function () {
+    //             changeStateOnScroll()
+    //         }
+    //     }
+    // }).overlayScrollbars();
 
     let sections = $('.mdc-layout-grid');
     let curr = 0;
@@ -23,32 +64,17 @@ $(function () {
         });
     }
 
+    // $('.arlex-open-lang').click(function () {
+    //     menu.setAnchorCorner(8);
+    //     menu.setAnchorElement(buttonEl);
+    //     menu.open = !menu.open;
+    // });
 
     $(window).on('scroll', function () {
         if (!isMoving)
             changeStateOnScroll()
     });
     changeStateOnScroll();
-
-    let placeMove = {
-        0: '.description',
-        1: '.notre-equipe',
-        2: '.contact',
-        3: '.faq'
-    };
-
-    let isMoving = false;
-
-    function moveTo(idx) {
-        isMoving = true;
-        console.log("bouge");
-        $('html,body').animate({
-            scrollTop: $(placeMove[idx]).offset().top - 150
-        }, 'slow', function () {
-            console.log("fini");
-            isMoving = false;
-        });
-    }
 
     tab.listen("MDCTabBar:activated", function(t) {
         moveTo(t.detail.index)
