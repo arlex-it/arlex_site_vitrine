@@ -10,6 +10,24 @@ a {
 a:hover {
   text-decoration: underline !important; }
 
+.notre-equipe {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-image: url(../jpg/photo_nous_arlex_enactus.jpg);
+  background-color: #6200ee;
+  background-blend-mode: soft-light;
+  transition: background-color 1s; }
+
+.faq {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-image: url(../jpg/question-mark-2492009_1280.jpg);
+  background-color: #6200ee;
+  background-blend-mode: soft-light;
+  transition: background-color 1s; }
+
 .arlex-center-btn {
   display: flex;
   justify-content: center; }

@@ -45,6 +45,12 @@ $(function () {
     // }).overlayScrollbars();
 
     let sections = $('.mdc-layout-grid');
+    let btns = [
+        $('.go-description'),
+        $('.go-team'),
+        $('.go-contact'),
+        $('.go-faq')
+    ];
     let curr = 0;
 
     function changeStateOnScroll() {
@@ -55,11 +61,12 @@ $(function () {
 
             if (cur_pos >= top && cur_pos <= bottom && curr !== $(this).attr('data-id')) {
                 curr = $(this).attr('data-id');
-                tab.tabList_[0].deactivate();
-                tab.tabList_[1].deactivate();
-                tab.tabList_[2].deactivate();
-                tab.tabList_[3].deactivate();
-                tab.tabList_[curr].activate();
+                for (btn of btns) {
+                    btn.removeClass('mdc-tab--active');
+                    btn.find('.mdc-tab-indicator').removeClass('mdc-tab-indicator--active');
+                }
+                btns[curr].addClass('mdc-tab--active');
+                btns[curr].find('.mdc-tab-indicator').addClass('mdc-tab-indicator--active');
             }
         });
     }

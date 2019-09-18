@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -71,8 +72,8 @@
 </head>
 
 <body>
-<header class="mdc-top-app-bar mdc-top-app-bar--fixed" data-mdc-auto-init="MDCTopAppBar">
-    <div class="mdc-tab-bar" role="tablist">
+<div class="mdc-top-app-bar mdc-top-app-bar--fixed" data-mdc-auto-init="MDCTopAppBar" tabindex="-1" aria-hidden="true">
+    <div class="mdc-tab-bar">
         <div class="mdc-tab-scroller">
             <div class="mdc-tab-scroller__scroll-area">
                 <!--<div class="mdc-menu-surface&#45;&#45;anchor">-->
@@ -87,7 +88,7 @@
                 <!--</div>-->
                 <!--</div>-->
                 <div class="mdc-tab-scroller__scroll-content">
-                    <button class="mdc-tab mdc-tab--active go-description" role="tab" aria-selected="true" tabindex="0">
+                    <div class="mdc-tab go-description mdc-tab--active">
                         <span class="mdc-tab__content">
                             <span class="mdc-tab__icon material-icons" aria-hidden="true">description</span>
                             <span class="mdc-tab__text-label">Description</span>
@@ -96,8 +97,8 @@
                             <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
                         </span>
                         <span class="mdc-tab__ripple"></span>
-                    </button>
-                    <button class="mdc-tab go-team" role="tab" tabindex="0">
+                    </div>
+                    <div class="mdc-tab go-team">
                         <span class="mdc-tab__content">
                             <span class="mdc-tab__icon material-icons" aria-hidden="true">group</span>
                             <span class="mdc-tab__text-label">Notre équipe</span>
@@ -106,8 +107,8 @@
                             <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
                         </span>
                         <span class="mdc-tab__ripple"></span>
-                    </button>
-                    <button class="mdc-tab go-contact" role="tab" tabindex="0">
+                    </div>
+                    <div class="mdc-tab go-contact">
                         <span class="mdc-tab__content">
                             <span class="mdc-tab__icon material-icons" aria-hidden="true">message</span>
                             <span class="mdc-tab__text-label">Contact</span>
@@ -116,8 +117,8 @@
                             <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
                         </span>
                         <span class="mdc-tab__ripple"></span>
-                    </button>
-                    <button class="mdc-tab go-faq" role="tab" tabindex="0">
+                    </div>
+                    <div class="mdc-tab go-faq">
                         <span class="mdc-tab__content">
                             <span class="mdc-tab__icon material-icons" aria-hidden="true">question_answer</span>
                             <span class="mdc-tab__text-label">FAQ</span>
@@ -126,16 +127,16 @@
                             <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
                         </span>
                         <span class="mdc-tab__ripple"></span>
-                    </button>
+                    </div>
                 </div>
             </div>
         </div>
         <!--</section>-->
     </div>
 
-</header>
+</div>
 
-<div class="mdc-layout-grid mdc-theme--secondary-bg mdc-theme--on-secondary description" style="padding-top: 70px" data-id="0">
+<div class="mdc-layout-grid mdc-theme--secondary-bg mdc-theme--on-secondary description" style="padding-top: 70px;" data-id="0">
     <div class="mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--align-middle">
             <img src="./jpg/logo.png" alt="logo arlex">
@@ -144,9 +145,9 @@
         mdc-layout-grid__cell--span-12-desktop
         mdc-layout-grid__cell--span-8-tablet
         arlex-align-3-11">
-            <p class="mdc-typography--body1 mdc-typography">Arlex permet à un déficient visuel de gagner du temps et de l’autonomie dans sa cuisine en demandant à un
-                assistant vocal où se trouve un produit, ou bien avoir accès à ses informations comme la date de
-                péremption, les ingrédients ou les allergènes. Tout cela sera rendu possible grâce à des capteurs qui seront
+            <p class="mdc-typography--body1 mdc-typography"><b>Arlex</b> permet à un déficient visuel de <b>gagner du temps et de l’autonomie</b> dans sa <b>cuisine</b> en demandant à un
+                assistant vocal où se trouve un produit, ou bien avoir accès à ses informations comme la <b>date de
+                    péremption, les ingrédients ou les allergènes</b>. Tout cela sera rendu possible grâce à des capteurs qui seront
                 installés dans les placards de la cuisine, ainsi que des patchs sur les produits.</p>
         </div>
 
@@ -159,7 +160,7 @@
     <h2 class="text-center mdc-typography mdc-typography--headline5">Arlex est un projet de fin d'étude composé de 6 étudiants d'Epitech Lille.</h2>
     <div class="mdc-layout-grid__inner arlex-mrt-50">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--align-middle">
-            <div class="mdc-card demo-card demo-basic-with-text-over-media">
+            <div class="mdc-card demo-card demo-basic-with-text-over-media" aria-hidden="true">
                 <div class="mdc-card__primary-action demo-card__primary-action">
                     <div class="mdc-card__media mdc-card__media-content demo-card__media">
                         <img src="./jpg/benjamin.losson.jpg" alt="Photo Benjamin Losson">
@@ -169,14 +170,14 @@
             <div class="mdc-card-info">
                 <h3 class="mdc-card__title mdc-typography mdc-typography--headline6">Benjamin Losson</h3>
             </div>
-            <div class="mdc-chip-set arlex-chipset-name arlex-mrt-n-15" data-mdc-auto-init="MDCChipSet">
+            <div class="mdc-chip-set arlex-chipset-name arlex-mrt-n-15" data-mdc-auto-init="MDCChipSet" aria-hidden="true">
                 <div class="mdc-chip">
                     <div class="mdc-chip__text">Développeur</div>
                 </div>
             </div>
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--align-middle">
-            <div class="mdc-card demo-card demo-basic-with-text-over-media">
+            <div class="mdc-card demo-card demo-basic-with-text-over-media" aria-hidden="true">
                 <div class="mdc-card__primary-action demo-card__primary-action">
                     <div class="mdc-card__media mdc-card__media-content demo-card__media">
                         <img src="./jpg/charles.castelain.jpg" alt="Photo Charles Castelain">
@@ -186,14 +187,14 @@
             <div class="mdc-card-info">
                 <h3 class="mdc-card__title mdc-typography mdc-typography--headline6">Charles Castelain</h3>
             </div>
-            <div class="mdc-chip-set arlex-chipset-name arlex-mrt-n-15" data-mdc-auto-init="MDCChipSet">
+            <div class="mdc-chip-set arlex-chipset-name arlex-mrt-n-15" data-mdc-auto-init="MDCChipSet" aria-hidden="true">
                 <div class="mdc-chip">
                     <div class="mdc-chip__text">Développeur</div>
                 </div>
             </div>
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--align-middle">
-            <div class="mdc-card demo-card demo-basic-with-text-over-media">
+            <div class="mdc-card demo-card demo-basic-with-text-over-media" aria-hidden="true">
                 <div class="mdc-card__primary-action demo-card__primary-action">
                     <div class="mdc-card__media mdc-card__media-content demo-card__media">
                         <img src="./jpg/augustin.lopacinski.jpg" alt="Photo Augustin Lopacinski">
@@ -203,14 +204,14 @@
             <div class="mdc-card-info">
                 <h3 class="mdc-card__title mdc-typography mdc-typography--headline6">Augustin Lopacinski</h3>
             </div>
-            <div class="mdc-chip-set arlex-chipset-name arlex-mrt-n-15" data-mdc-auto-init="MDCChipSet">
+            <div class="mdc-chip-set arlex-chipset-name arlex-mrt-n-15" data-mdc-auto-init="MDCChipSet" aria-hidden="true">
                 <div class="mdc-chip">
                     <div class="mdc-chip__text">Développeur</div>
                 </div>
             </div>
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--align-middle">
-            <div class="mdc-card demo-card demo-basic-with-text-over-media">
+            <div class="mdc-card demo-card demo-basic-with-text-over-media" aria-hidden="true">
                 <div class="mdc-card__primary-action demo-card__primary-action">
                     <div class="mdc-card__media mdc-card__media-content demo-card__media">
                         <img src="./jpg/corentin.minne.jpg" alt="Photo Corentin Minne">
@@ -220,14 +221,14 @@
             <div class="mdc-card-info">
                 <h3 class="mdc-card__title mdc-typography mdc-typography--headline6">Corentin Minne</h3>
             </div>
-            <div class="mdc-chip-set arlex-chipset-name arlex-mrt-n-15" data-mdc-auto-init="MDCChipSet">
+            <div class="mdc-chip-set arlex-chipset-name arlex-mrt-n-15" data-mdc-auto-init="MDCChipSet" aria-hidden="true">
                 <div class="mdc-chip">
                     <div class="mdc-chip__text">Développeur</div>
                 </div>
             </div>
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--align-middle">
-            <div class="mdc-card demo-card demo-basic-with-text-over-media">
+            <div class="mdc-card demo-card demo-basic-with-text-over-media" aria-hidden="true">
                 <div class="mdc-card__primary-action demo-card__primary-action">
                     <div class="mdc-card__media mdc-card__media-content demo-card__media">
                         <img src="./jpg/orlane.oddo.jpg" alt="Photo Orlane Oddo">
@@ -237,14 +238,14 @@
             <div class="mdc-card-info">
                 <h3 class="mdc-card__title mdc-typography mdc-typography--headline6">Orlane Oddo</h3>
             </div>
-            <div class="mdc-chip-set arlex-chipset-name arlex-mrt-n-15" data-mdc-auto-init="MDCChipSet">
+            <div class="mdc-chip-set arlex-chipset-name arlex-mrt-n-15" data-mdc-auto-init="MDCChipSet" aria-hidden="true">
                 <div class="mdc-chip">
                     <div class="mdc-chip__text">Développeuse</div>
                 </div>
             </div>
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--align-middle">
-            <div class="mdc-card demo-card demo-basic-with-text-over-media">
+            <div class="mdc-card demo-card demo-basic-with-text-over-media" aria-hidden="true">
                 <div class="mdc-card__primary-action demo-card__primary-action">
                     <div class="mdc-card__media mdc-card__media-content demo-card__media">
                         <img src="./jpg/simon.bauchet.jpg" alt="Photo Simon Bauchet">
@@ -254,7 +255,7 @@
             <div class="mdc-card-info">
                 <h3 class="mdc-card__title mdc-typography mdc-typography--headline6">Simon Bauchet</h3>
             </div>
-            <div class="mdc-chip-set arlex-chipset-name arlex-mrt-n-15" data-mdc-auto-init="MDCChipSet">
+            <div class="mdc-chip-set arlex-chipset-name arlex-mrt-n-15" data-mdc-auto-init="MDCChipSet" aria-hidden="true">
                 <div class="mdc-chip">
                     <div class="mdc-chip__text">Développeur</div>
                 </div>
@@ -295,7 +296,7 @@
                     <div class="mdc-notched-outline">
                         <div class="mdc-notched-outline__leading"></div>
                         <div class="mdc-notched-outline__notch">
-                            <label class="mdc-floating-label">Votre nom</label>
+                            <label for="username-input" class="mdc-floating-label">Votre nom</label>
                         </div>
                         <div class="mdc-notched-outline__trailing"></div>
                     </div>
@@ -311,7 +312,7 @@
                     <div class="mdc-notched-outline">
                         <div class="mdc-notched-outline__leading"></div>
                         <div class="mdc-notched-outline__notch">
-                            <label class="mdc-floating-label">Votre email</label>
+                            <label for="email-input" class="mdc-floating-label">Votre email</label>
                         </div>
                         <div class="mdc-notched-outline__trailing"></div>
                     </div>
@@ -326,7 +327,7 @@
                     <div class="mdc-notched-outline">
                         <div class="mdc-notched-outline__leading"></div>
                         <div class="mdc-notched-outline__notch">
-                            <label class="mdc-floating-label">Objet</label>
+                            <label for="subject-input" class="mdc-floating-label">Objet</label>
                         </div>
                         <div class="mdc-notched-outline__trailing"></div>
                     </div>
@@ -363,7 +364,7 @@
     </form>
 </div>
 <div class="mdc-layout-grid mdc-theme--primary-bg mdc-theme--on-primary faq" data-id="3">
-    <h1 class="mdc-typography mdc-typography--headline3 text-center">Questions récurrentes</h1>
+    <h1 class="mdc-typography mdc-typography--headline3 text-center">Questions fréquentes</h1>
     <hr class="arlex-separator">
     <div class="mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell
@@ -401,37 +402,37 @@
 <footer class="mdc-layout-grid mdc-theme--secondary-bg mdc-theme--on-secondary arlex-footer">
     <div class="arlex-footer-left">
         <p class="arlex-footer-links">
-            <a href="#" onclick="moveTo(0)">Description</a>
+            <a aria-label="Allez à la description" title="Allez à la description" href="#" onclick="moveTo(0)">Description</a>
             ·
-            <a href="#" onclick="moveTo(1)">Notre équipe</a>
+            <a aria-label="Allez à Notre équipe" title="Allez à Notre équipe" href="#" onclick="moveTo(1)">Notre équipe</a>
             ·
-            <a href="#" onclick="moveTo(2)">Contact</a>
+            <a aria-label="Allez à contact" title="Allez à contact" href="#" onclick="moveTo(2)">Contact</a>
             ·
-            <a href="#" onclick="moveTo(3)">FAQ</a>
+            <a aria-label="Allez à la F-A-Q" title="Allez à la F-A-Q" href="#" onclick="moveTo(3)">FAQ</a>
         </p>
 
         <p>Arlex © 2018</p>
     </div>
     <div class="arlex-footer-center">
-        <div class="mdc-typography mdc-typography--body1">
+        <div tabindex="0" class="mdc-typography mdc-typography--body1">
             Vous souhaitez nous aider ? <br>
             Nous avons 2 sondages pour vous !
         </div>
         <ul>
-            <li><a title="Premier sondage" rel="nofollow noreferrer" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSe_V0ktcx9ADjdBHQvjIUPzaqhFkEXCVxGSB1bMC49MbTGh7g/viewform">- Premier sondage</a></li>
-            <li><a title="Second sondage" rel="nofollow noreferrer" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfdazzXeXEgQU7zbPrt9L_NUnQ_hHi8Z7As3HQ8dx9reeGtAg/viewform">- Second sondage</a></li>
+            <li><a aria-label="Voici le premier sondage" title="Voici le premier sondage" rel="nofollow noreferrer" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSe_V0ktcx9ADjdBHQvjIUPzaqhFkEXCVxGSB1bMC49MbTGh7g/viewform">- Premier sondage</a></li>
+            <li><a aria-label="Voici le second sondage" title="Voici le second sondage" rel="nofollow noreferrer" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfdazzXeXEgQU7zbPrt9L_NUnQ_hHi8Z7As3HQ8dx9reeGtAg/viewform">- Second sondage</a></li>
         </ul>
     </div>
     <div class="arlex-footer-right">
         <div class="arlex-footer-social">
             <a href="https://www.facebook.com/ArlexFR" rel="nofollow noreferrer" title="Aller sur Facebook" aria-label="Aller sur Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
             <a href="https://twitter.com/ArlexFR" rel="nofollow noreferrer" title="Aller sur Twitter" aria-label="Aller sur Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-            <a href="#" rel="nofollow noreferrer" title="Aller sur Linkedin" aria-label="Aller sur Linkedin"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+            <!--<a href="#" rel="nofollow noreferrer" title="Aller sur Linkedin" aria-label="Aller sur Linkedin"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>-->
         </div>
         <div class="arlex-footer-infos" title="Nous contacter" aria-label="Nous contacter">
             <i class="fas fa-envelope" aria-hidden="true"></i><a href="mailto:contact@arlex.fr">contact@arlex.fr</a>
         </div>
-        <div class="arlex-footer-infos" title="Notre position" aria-label="Notre position">
+        <div tabindex="0" class="arlex-footer-infos" title="Notre position" aria-label="Notre position">
             <i class="fas fa-map-marker-alt" aria-hidden="true"></i>Lille, <b>France</b>
         </div>
     </div>
